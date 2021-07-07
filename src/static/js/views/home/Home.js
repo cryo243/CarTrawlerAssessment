@@ -23,7 +23,7 @@ export default class extends App {
              ${carDetail.fuelType}  -  ${carDetail.transmissionType}
                </div>
                <h4>${carDetail.vendorName}</h4>
-              <div style="color: aquamarine">
+              <div style="color:  ${carDetail.status.toLowerCase() === 'available'? 'aquamarine': 'red'} ">
               ${carDetail.status}
               </div>
               </div>
