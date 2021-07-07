@@ -40,7 +40,7 @@ export default class extends App {
              <div> on ${pickupDate.getDate()}  ${pickupDate.toLocaleString('default', { month: 'long' })}  ${pickupDate.getFullYear()}</div>
            </div  >
                  <div class="legend-container-item">
-                   <div> Pick up at ${legend.returnLocation + '  '}</div>
+                   <div> Return at ${legend.returnLocation + '  '}</div>
              <div> on ${returnDate.getDate()}  ${returnDate.toLocaleString('default', { month: 'long' })}  ${returnDate.getFullYear()}</div>
            </div>
             </div>
@@ -60,12 +60,12 @@ export default class extends App {
             </div>
         `;
         } catch (error) {
-            return this.render(` 
+            return ` 
             <h1>An error occurred  while fetching the data</h1>
             <p>
             ${error}
            </p>
-        `);
+        `;
         }
 
     }

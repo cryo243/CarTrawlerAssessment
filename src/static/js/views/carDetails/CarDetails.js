@@ -9,8 +9,9 @@ export default class extends App {
     }
 
     async getHtml() {
-        const carDetails = await new CarViewModel().getCarDetailsByIndex(this.carIndex);
-        return `
+        try{
+            const carDetails = await new CarViewModel().getCarDetailsByIndex(this.carIndex);
+            return `
            ${this.getHeader()}
             <div class="car-details-container">
             <div  class="car-details-container-item">
@@ -57,5 +58,14 @@ export default class extends App {
            </div>
            
         `;
+        }
+        catch (error) {
+            return ` 
+            <h1>An error occurred  while fetching the data</h1>
+            <p>
+            ${error}
+           </p>
+        `;
+        }
     }
 }
