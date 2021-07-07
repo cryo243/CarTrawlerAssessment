@@ -1,0 +1,9 @@
+.idea
+.idea/*.xml
+*.log
+*.iml
+.project
+# Dependency directories
+node_modules
+
+

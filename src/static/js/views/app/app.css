@@ -1,0 +1,21 @@
+/**App**/
+.spa-shell-head-logo {
+    top: 4px;
+    left: 4px;
+    height: 52px;
+    width: 128px;
+    background: url('/static/img/logo2017.png')  no-repeat center center;
+    background-size: contain;
+}
+
+.spa-shell-title {
+    display: flex;
+    justify-content: center;
+}
+.spa-shell-head-action-container {
+    display: flex;
+    align-items: center;
+}
+.spa-shell-main {
+    margin-top: 60px;
+}

@@ -1,0 +1,43 @@
+/**Home**/
+.legend-container{
+    display: flex;
+   align-content: center;
+    justify-content: space-between;
+}
+.legend-container-item {
+    display: flex;
+}
+ul.spa-list {
+    list-style-type: none;
+    width: 500px;
+}
+
+
+ul.spa-list  li {
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+ul.spa-list  li img {
+    float: left;
+    width: 30%;
+}
+
+ul.spa-list li  p {
+    font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+ul.spa-list li a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+ul.spa-list li:hover {
+    cursor: pointer;
+    background-color: #a4a4a0;
+}

@@ -1,0 +1,28 @@
+.car-details-container {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+.car-details-container-item{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.car-details-container img{
+    width: 100%;
+}
+.car-details-properties{
+    display: flex;
+    width: 70%;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.car-details-properties div{
+    font-size: large;
+}
+.car-details-properties:nth-child(odd) {
+    background: #eae1cf;;
+}
