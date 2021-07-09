@@ -1,8 +1,9 @@
 import Car from "./Car.js";
 import {Legend} from "./Legend.js";
-import {getCarDetails} from "../apis/carApis.js";
+import {CarRepository} from "../domain/carRepository.js";
 /**
  * This class holds a singleton implementation of the car view model used by both the details screen and the home screen
+ * The view model gets the car data from the car repository
  * */
 let instance = null;
 export default class CarViewModel {
@@ -12,6 +13,7 @@ export default class CarViewModel {
             instance = this;
             this.legend = null;
             this.carDetails = null;
+            this.repository = new CarRepository();
         }
         return instance;
     }
@@ -51,7 +53,7 @@ export default class CarViewModel {
 
     async getCarData() {
         try {
-            const carData = await getCarDetails();
+            const carData = await this.repository.getCarData();
             this.legend = this._extractLegend(carData[0].VehAvailRSCore.VehRentalCore);
             this.carDetails = this._getCarItems(carData[0].VehAvailRSCore.VehVendorAvails);
             return {legend: this.legend, carDetails: this.carDetails};

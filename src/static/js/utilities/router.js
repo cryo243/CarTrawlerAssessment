@@ -16,7 +16,7 @@ const navigateTo = url => {
     router();
 };
 const bindAllLinks = () =>{
-    const list = document.querySelectorAll('li[data-link]');
+    const list = document.querySelectorAll('[data-link]');
     list.forEach(node => {
         node.addEventListener('click', e=>{
             e.preventDefault();
@@ -36,7 +36,7 @@ const router = async () => {
 
     if (!match) {
         match = {
-            route: routes[0],
+            route: routes[0], //default route
             result: [location.pathname]
         };
     }
