@@ -23,7 +23,7 @@ Then open the browser to the specified url printed in the console . Default at [
 - The css  of every view are imported in index.css to have a single entry
 - The js files make use of es6 modules with src/static/js/index.js as a single entry point to the project
 #### Routing
-- I implemented the router based on this  [https://www.youtube.com/watch?v=6BozpmSjk-Y](article)
+- I implemented the router based on this  [article](https://www.youtube.com/watch?v=6BozpmSjk-Y)
 - In a nutshell it makes uses of the browser history apis combined with a render (getHtml) method to transform the template literal into html pages
 #### API & Caching
 - This project does not implemented html caching or lifecycle event to prevent the network calls from being performed every time the html is rendered
